@@ -1,0 +1,86 @@
+@import 'variables';
+
+.wrapper {
+  display: grid;
+  gap: $gutter;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 4rem auto;
+  max-width: $max-size-screen;
+}
+
+header {
+  grid-column: 2 / span 2;
+}
+
+main {
+  display: grid;
+  gap: $gutter;
+  grid-column: span 3;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.valstika {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 1;
+
+  > div {
+    margin-bottom: 2rem;
+  }
+}
+
+.sorting-container {
+  margin-bottom: 2rem;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.content {
+  grid-column: 2 / span 2;
+  width: 100%;
+}
+
+.verkefnalisti {
+  display: flex;
+  flex-direction: column;
+}
+
+.verkefni {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+
+  input {
+    align-self: flex-start;
+    width: 3%;
+  }
+}
+
+.verkefni-container {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+}
+
+.verkefnisflokkun {
+  display: flex;
+  justify-content: space-between;
+}
+
+.taggar {
+  flex: 1;
+  margin-left: 1rem;
+
+  .tag {
+    margin: 0 0.1rem;
+  }
+}
+
+.task-category {
+  align-self: end;
+}

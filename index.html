@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="is">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="main.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Verkefnalistinn</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Verkefnalistinn</h1>
+      </header>
+      <main>
+        <div class="valstika">
+          <div>
+            <ul>
+              <li class="menu-item" id="all-tasks">
+                <div class="all-tasks">Öll verkefni</div>
+                <div class="valfjoldi Verkefni"></div>
+              </li>
+              <li class="menu-item" id="unfinished">
+                <div class="unfinished">Ókláruð verkefni</div>
+                <div class="valfjoldi ókláruðVerkefni"></div>
+              </li>
+              <li class="menu-item" id="finished">
+                <div class="finished">Kláruð verkefni</div>
+                <div class="valfjoldi kláruðVerkefni"></div>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2>Flokkar</h2>
+            <ul class="flokkarListi"></ul>
+          </div>
+          <div>
+            <h2>Tags</h2>
+            <ul class="tagListi"></ul>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="taskList">
+            <div class="sorting-container">
+              Raða eftir:
+              <select class="sorting" name="sorting">
+                <option value="due">Dagsetningu</option>
+                <option value="title">Titli</option>
+                <option value="priority">Forgangi</option>
+              </select>
+            </div>
+            <div class="verkefnalisti"></div>
+            <a href="" class="baetavidverkefni">
+              <button class="button round">+</button>
+              Bæta við verkefni
+            </a>
+          </div>
+
+          <div class="createchange">
+            <div class="smidaverkefni">
+              Form til þess að búa til nýtt/breyta verkefni
+              <form id="nyttVerkefni">
+                <div>
+                  <label for="titill">Titill:</label>
+                  <input
+                    type="text"
+                    name="titill"
+                    id="titill"
+                    placeholder="Titill á verkefni"
+                  />
+                </div>
+                <div>
+                  <label for="lysing">Lýsing:</label>
+                  <textarea
+                    name="lysing"
+                    id="lysing"
+                    cols="30"
+                    rows="4"
+                    placeholder="Lýsing á verkefni"
+                  ></textarea>
+                </div>
+                <div>
+                  <label for="due">Lokadagsetning:</label>
+                  <input
+                    type="date"
+                    id="due"
+                    name="due"
+                    value="2021-11-16"
+                    min="2021-11-16"
+                    max="2022-11-16"
+                  />
+                  <label for="appt">Lokatími:</label>
+                  <input type="time" id="dueTime" name="dueTime" />
+                </div>
+                <div class="forgang">
+                  <p>Er verkefni í forgangi?</p>
+                  <label
+                    ><input
+                      id="jaForgang"
+                      type="radio"
+                      name="erForgang"
+                    />Já</label
+                  >
+                  <label
+                    ><input
+                      id="neiForgang"
+                      type="radio"
+                      name="erForgang"
+                    />Nei</label
+                  >
+                </div>
+                <div>
+                  <label for="flokkar">Flokkur:</label>
+                  <select class="flokkarOptions">
+                    <option></option>
+                    <option>Vefforrit</option>
+                    <option>Skipulag</option>
+                    <option>Vefþjónustur</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="tags">Tags:</label>
+                  <textarea
+                    name="tags"
+                    id="tags"
+                    cols="30"
+                    rows="4"
+                    placeholder="Listi af töggum með bili á milli"
+                  ></textarea>
+                </div>
+                <div class="comfirmDelete_buttons">
+                  <!-- <button class="button confirm" type="submit">Vista</button> -->
+                  <!-- <button class="button delete" id="deleteButton">Eyða</button> -->
+                  <!-- <button class="button cancel" id="cancelButton">
+                    Hætta við
+                  </button> -->
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

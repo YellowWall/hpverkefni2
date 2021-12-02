@@ -1,0 +1,53 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: $font-family;
+  font-size: $default-font-size;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.createchange input,
+textarea {
+  width: 100%;
+}
+
+label {
+  display: inline-block;
+  margin: 8px 0 4px;
+}
+
+.baetavidverkefni :nth-child(1) {
+  text-align: center;
+}
+
+.verkefni input {
+  margin-top: $check-fix;
+}
+
+.verkefni {
+  border-bottom: 1px solid $task-border-color;
+  padding-bottom: 2rem;
+}
+
+.hidden {
+  display: none;
+}

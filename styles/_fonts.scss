@@ -1,0 +1,19 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.valfjoldi {
+  color: $quantity-color;
+}
+
+.verkefnistitill {
+  margin-bottom: 1rem;
+}
+
+.verkefnislysing {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: 1.2rem;
+}

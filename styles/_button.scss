@@ -1,0 +1,48 @@
+.button {
+  background-color: $button-color;
+  color: #000;
+  display: inline-block;
+  font-size: $default-font-size;
+  margin-right: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.4rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.tag {
+  background-color: $tag-color;
+  border-radius: 5px;
+  padding: 0.4rem;
+}
+
+.round {
+  border: 1px solid #000;
+  border-radius: 60%;
+  height: 25px;
+  line-height: 4px;
+  width: 25px;
+}
+
+.menu-item,
+.verkefnistitill,
+.checkbox,
+.baetavidverkefni {
+  cursor: pointer;
+}
+
+.menu-item-selected {
+  background-color: darkgrey;
+}
+
+.checkbox {
+  border-radius: 50px;
+}
+
+.menu-item {
+  transition: background ease-in-out 200ms;
+
+  &:hover {
+    background: $hover-menu;
+  }
+}

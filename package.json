@@ -1,0 +1,44 @@
+{
+  "name": "vef1-2021-h2",
+  "version": "1.0.0",
+  "description": "[Kynning í fyrirlestri](https://youtu.be/Alsi_j6skHY)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browser-sync": "browser-sync start --server --files index.html fyrirmynd.html styles.css",
+    "lint-scss": "stylelint styles.scss ./**/*.scss",
+    "sass": "sass styles.scss styles.css",
+    "lint": "eslint ./**/*.js",
+    "sass-watch": "sass --watch styles.scss:styles.css styles:styles",
+    "dev": "concurrently npm:sass-watch npm:browser-sync",
+    "prettier": "prettier --write .",
+    "build:sass": "sass --no-source-map styles:styles styles.scss:styles.css",
+    "build-win:copy": "mkdir build\\ && cp -r *.html *.css *.js data.json lib\\ build\\",
+    "build-unix:copy": "mkdir -p build/ && cp -r *.html *.css *.js data.json lib/ build/",
+    "build-win": "npm run build:sass && npm run build-win:copy",
+    "build-unix": "npm run build:sass && npm run build-unix:copy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtliAsmunds/vef1-2021-h2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AtliAsmunds/vef1-2021-h2/issues"
+  },
+  "homepage": "https://github.com/AtliAsmunds/vef1-2021-h2#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "concurrently": "^6.3.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "prettier": "^2.4.1",
+    "sass": "^1.43.4",
+    "stylelint": "^14.0.1",
+    "stylelint-config-sass-guidelines": "^9.0.1",
+    "stylelint-config-standard": "^23.0.0"
+  }
+}
